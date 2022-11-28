@@ -23,14 +23,7 @@ header {
   padding: 0, 5rem;
   grid-area: head;
 }
-.Header_Grid {
-  display: grid;
-  width: 100%;
-  height: 150px;
-  grid-template-areas:
-    "img nav"
-  grid-template-columns: 150px 1fr;
-}
+
 .nav_list {
   list-style-type: none;
   display: grid;
@@ -117,6 +110,16 @@ header {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  /*degradado*/
+  background: linear-gradient(90deg, #003049, #d62828, #003049) 0 0 / 400% 100%;
+  animation: move-bg 6s infinite linear;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+@keyframes move-bg {
+  to {
+    background-position: 400% 0;
+  }
 }
 .download_logobox {
   display: block;
@@ -137,31 +140,70 @@ header {
 .form__type {
   text-align: left;
 }
+
+/*acá implementé grid y flexbox*/
+/*Footer_style*/
+footer {
+  background-color: #676767;
+  color: white;
+  padding: 1rem;
+  height: 1fr;
+}
 .footer_intro {
-  background-color: #003049;
-  text-align: center;
   text-transform: lowercase;
   color: #eae2b7;
   font-weight: bolder;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
+  /*prueba grid*/
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: 20px auto 5px;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-template-areas:
+    "img footer_title footer_title footer_icons"
+    "img footer_text1 footer_text2 footer_icons"
+    "footer_copyright footer_copyright footer_copyright footer_copyright";
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1320px;
 }
+
 .footer_title {
-  text-align: center;
+  text-align: left;
   text-transform: capitalize;
   color: #eae2b7;
   font-weight: bold;
   font-size: 1rem;
-  text-align: center;
+  grid-area: footer_title;
 }
-.footer_text {
+.footer_text1 {
+  grid-area: footer_text1;
   font-weight: normal;
+  height: 60px;
 }
+.footer_text2 {
+  grid-area: footer_text2;
+  font-weight: normal;
+  height: 60px;
+}
+.footer_icons {
+  align-self: flex-start;
+  grid-area: footer_icons;
+}
+.footer_icons_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer_icons_flex > img {
+  width: 2rem;
+  height: 2rem;
+}
+
 .footer_copyright {
-  background-color: #003049;
-  text-align: center;
-  text-transform: lowercase;
-  color: #eae2b7;
   font-weight: normal;
-  font-size: 1rem;
+  grid-area: footer_copyright;
+  text-align: center;
 }
