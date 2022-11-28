@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="imagen/favoritochurros.png" type="image/x-icon">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+        <title>Contacto</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="../index.html">
+                    <img class="logo" src="../imagen/g14_profile_c4-removebg-preview.png" alt="logo" />
+                </a>
+                <nav>
+                    <ul class="nav_list">
+                        <li><a class="nav_link" href="../index.html">Inicio</a></li>
+                        <li><a class="nav_link" href="nosotros.html">Nosotros</a></li>
+                        <li><a class="nav_link" href="noticias.html">Noticias</a></li>
+                        <li><a class="nav_link" href="productos.html">Productos</a></li>
+                        <li><a class="nav_link" href="contacto.html">Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="intro_section">
+            <div class="container">
+                <div class="selection">
+                    <h1>Contacto</h1>
+                    <form action="contacto">
+                        <fieldset>
+                            <div class="form__intro">
+                                <legend>Contáctenos</legend>
+                                <div class="form_names">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" name="nombre" id="nombre">
+                                    <label for="Apellido">Apellido</label>
+                                    <input type="text" name="apellido" id="apellido">
+                                    <label for="text">Mail</label>
+                                    <input type="text" name="mail" id="mail">
+                                </div>
+                                <div class="form__gender">
+                                    <div>Hombre</div>
+                                    <input type="radio" name="sexo" value="hombre">
+                                    <div>Mujer</div>
+                                    <input type="radio" name="sexo" value="mujer">
+                                </div>
+                                <div class="form__type">
+                                    <label for="tipo">Tipo de contacto</label>
+                                    <select name="tipo" id="tipo">
+                                        <option value="s">Sugerencias</option>
+                                        <option value="a">Ayuda</option>
+                                        <option value="r">Reclamo</option>
+                                    </select>
+                                </div>
+                                <label for="mensaje">mensaje</label>
+                                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                                <button class="form__button">
+                                    <input type="submit" value="enviar formulario">
+                                </button>
+                                <button type="reset" class="form__button--reset">
+                                    <input type="reset" value="borrar formulario">
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <section class="intro_section">
+            <div class="container">
+                <h4 class="download_title">Descargas</h4>
+                <div class="download_logobox">
+                    <img src="../imagen/playstore.png" alt="logo playstore" />
+                    <img src="../imagen/app-store.png" alt="logo appstore" />
+                    <img src="../imagen/windows.png" alt="logo windows" />
+                </div>
+            </div>
+        </section>
+        </main>
+        <footer>
+            <div class="footer_intro">
+                <div class="container">
+                    <h4 class="footer_title">Buscanos en las redes</h4>
+                    <p class="footer_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <div class="footer_icons">
+                        <img src="../imagen/facebook.svg" alt="logo facebook" />
+                        <img src="../imagen/instagram.svg" alt="logo instagram" />
+                        <img src="../imagen/twitter.svg" alt="logo twitter" />
+                    </div>
+                </div>
+                <div class="footer_copyright">
+                    <p>copyrigth2022 <a href="#">logoipsum</a> Creado por Nicolás Solari</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
