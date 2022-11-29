@@ -6,11 +6,7 @@
 body {
   font-family: "montserrat", sans-serif;
 }
-.container {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 1320px;
-}
+
 .logo {
   width: 150px;
   grid-area: img;
@@ -20,18 +16,10 @@ img {
 }
 header {
   background-color: #d62828;
-  padding: 0, 5rem;
+  padding: 0.5rem;
   grid-area: head;
 }
 
-.nav_list {
-  list-style-type: none;
-  display: grid;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  grid-area: nav;
-}
 .nav_link {
   color: #eae2b7;
   text-transform: uppercase;
@@ -45,14 +33,16 @@ header {
   background-color: #eae2b7;
 }
 .intro_section {
-  padding: 3rem 0 0 0;
+  padding: 1rem 0 0 0;
   background-color: #eae2b7;
 }
+
 .selection {
   text-transform: capitalize;
   color: #003049;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  text-align: center;
 }
 .titule {
   font-weight: 700;
@@ -60,11 +50,14 @@ header {
 .text_2 {
   text-transform: capitalize;
   color: #f77f00;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
-  margin-top: 1rem;
-  display: block;
+  margin-top: 1.5rem;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 .card {
   margin: 0rem;
   max-width: 100%;
@@ -75,10 +68,11 @@ header {
 }
 .card__image {
   display: block;
-  width: 60%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .form__button {
   display: inline-block;
   border-radius: 5px;
@@ -105,16 +99,16 @@ header {
 .download_title {
   text-align: center;
   text-transform: uppercase;
-  color: #003049;
   font-weight: bolder;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+
   /*degradado*/
   background: linear-gradient(90deg, #003049, #d62828, #003049) 0 0 / 400% 100%;
   animation: move-bg 6s infinite linear;
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 @keyframes move-bg {
   to {
@@ -123,11 +117,13 @@ header {
 }
 .download_logobox {
   display: block;
-  width: 55px;
+  width: 65px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  padding: 0, 5rem;
+  padding: 0.5rem;
+  box-sizing: content-box;
 }
 .form__intro {
   text-transform: capitalize;
@@ -158,16 +154,17 @@ footer {
   /*prueba grid*/
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: 20px auto 5px;
+  grid-template-rows: 0.5fr 1.5fr 1fr 0.5fr;
   height: auto;
-  grid-template-columns: 1fr 1fr 1fr 3fr;
+  grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas:
-    "img footer_title footer_title footer_icons"
-    "img footer_text1 footer_text2 footer_icons"
-    "footer_copyright footer_copyright footer_copyright footer_copyright";
-  width: 80%;
+    "img footer_title footer_title"
+    "img footer_text1 footer_text2"
+    "footer_icons footer_icons footer_icons"
+    "footer_copyright footer_copyright footer_copyright";
+  width: 90%;
   margin: 0 auto;
-  max-width: 1320px;
+  max-width: 768px;
 }
 
 .footer_title {
@@ -182,11 +179,13 @@ footer {
   grid-area: footer_text1;
   font-weight: normal;
   height: 60px;
+  text-align: left;
 }
 .footer_text2 {
   grid-area: footer_text2;
   font-weight: normal;
   height: 60px;
+  text-align: right;
 }
 .footer_icons {
   align-self: flex-start;
@@ -206,4 +205,124 @@ footer {
   font-weight: normal;
   grid-area: footer_copyright;
   text-align: center;
+}
+/* Desk*/
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1320px;
+  }
+  .nav_list {
+    list-style-type: none;
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: nav;
+  }
+  .intro_section {
+    padding: 3rem 0 0 0;
+    background-color: #eae2b7;
+  }
+  .selection {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .text_2 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    display: block;
+  }
+  .card__image {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .download {
+    margin-left: none;
+    margin-right: none;
+  }
+  .download_logobox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 8rem;
+    height: 8rem;
+    max-width: 100%;
+
+    justify-content: center;
+  }
+  .download_logobox > img {
+    padding: 1rem;
+  }
+  /*acá implementé grid y flexbox*/
+  /*Footer_style*/
+  footer {
+    background-color: #676767;
+    color: white;
+    padding: 1rem;
+    height: 1fr;
+  }
+  .footer_intro {
+    text-transform: lowercase;
+    color: #eae2b7;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: left;
+    /*prueba grid*/
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-rows: 20px auto 5px;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    grid-template-areas:
+      "img footer_title footer_title footer_icons"
+      "img footer_text1 footer_text2 footer_icons"
+      "footer_copyright footer_copyright footer_copyright footer_copyright";
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1320px;
+  }
+
+  .footer_title {
+    text-align: left;
+    text-transform: capitalize;
+    color: #eae2b7;
+    font-weight: bold;
+    font-size: 1rem;
+    grid-area: footer_title;
+  }
+  .footer_text1 {
+    grid-area: footer_text1;
+    font-weight: normal;
+    height: 60px;
+  }
+  .footer_text2 {
+    grid-area: footer_text2;
+    font-weight: normal;
+    height: 60px;
+  }
+  .footer_icons {
+    align-self: flex-start;
+    grid-area: footer_icons;
+  }
+  .footer_icons_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer_icons_flex > img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .footer_copyright {
+    font-weight: normal;
+    grid-area: footer_copyright;
+    text-align: center;
+  }
 }
