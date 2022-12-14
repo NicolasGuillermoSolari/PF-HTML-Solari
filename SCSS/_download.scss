@@ -1,0 +1,53 @@
+.download {
+  background-color: #eae2b7;
+  .download_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+    /*degradado*/
+    background: linear-gradient(90deg, #003049, #d62828, #003049) 0 0 / 400%
+      100%;
+    animation: move-bg 6s infinite linear;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  @keyframes move-bg {
+    to {
+      background-position: 400% 0;
+    }
+  }
+  .download_logobox {
+    display: block;
+    width: 65px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding: 0.5rem;
+    box-sizing: content-box;
+  }
+}
+@media (min-width: 768px) {
+  .download {
+    margin-left: none;
+    margin-right: none;
+    .container {
+      .download_logobox {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 8rem;
+        height: 8rem;
+        max-width: 100%;
+        justify-content: center;
+        img {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

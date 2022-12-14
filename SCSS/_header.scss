@@ -1,0 +1,38 @@
+header {
+  background-color: #d62828;
+  padding: 0.5rem;
+  grid-area: head;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    .logo {
+      width: 150px;
+      grid-area: img;
+    }
+    nav {
+      ul {
+        .nav_link {
+          color: #eae2b7;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: bold;
+          &:hover {
+            opacity: 0.65;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  header {
+    .nav_list {
+      list-style-type: none;
+      display: grid;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      grid-area: nav;
+    }
+  }
+}
