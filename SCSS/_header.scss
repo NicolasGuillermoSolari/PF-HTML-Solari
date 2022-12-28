@@ -1,5 +1,5 @@
 header {
-  background-color: #d62828;
+  background-color: $header-color;
   padding: 0.5rem;
   grid-area: head;
   .container {
@@ -12,7 +12,7 @@ header {
     nav {
       ul {
         .nav_link {
-          color: #eae2b7;
+          color: $primary-color;
           text-transform: uppercase;
           text-decoration: none;
           font-weight: bold;

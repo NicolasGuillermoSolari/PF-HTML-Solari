@@ -1,11 +1,11 @@
 .intro_section {
-  background-color: #eae2b7;
+  background-color: $primary-color;
   padding: 1rem 0 0 0;
   .container {
-    color: #003049;
+    color: $blue-color;
     .selection {
       .table_intro {
-        border-color: #003049;
+        border-color: $blue-color;
       }
     }
   }
@@ -13,7 +13,7 @@
 
 .form__intro {
   text-transform: capitalize;
-  color: #003049;
+  color: $blue-color;
   font-size: 1, 5rem;
 }
 .form__gender {
