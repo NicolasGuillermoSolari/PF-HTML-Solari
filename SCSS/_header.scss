@@ -10,7 +10,7 @@ header {
       grid-area: img;
     }
     nav {
-      ul {
+      .nav_list {
         .nav_link {
           color: $primary-color;
           text-transform: uppercase;
