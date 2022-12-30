@@ -6,6 +6,9 @@
     .selection {
       .table_intro {
         border-color: $blue-color;
+        tr {
+          border-color: beige;
+        }
       }
     }
   }
