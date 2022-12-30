@@ -33,8 +33,6 @@
 }
 @media (min-width: 768px) {
   .download {
-    margin-left: none;
-    margin-right: none;
     .container {
       .download_logobox {
         display: flex;
@@ -44,15 +42,10 @@
         height: auto;
         max-width: 100%;
         justify-content: center;
-        a {
+        .imagen {
           height: 8rem;
           width: auto;
           padding: 1rem;
-          img {
-            height: 8rem;
-            width: auto;
-            padding: 1rem;
-          }
         }
       }
     }

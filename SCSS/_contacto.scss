@@ -26,19 +26,22 @@
   }
   .item2_red {
     grid-area: 7 / 1 / span 6 / span 10;
-    text-align: justify;
-
-    color: $primary-color;
-    font-weight: bold;
-    font-size: 1rem;
-    font-size: medium;
     display: inline;
+    p {
+      text-align: left;
+      text-align: justify;
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 1rem;
+      font-size: medium;
+      width: 100%;
+    }
   }
   .item3_red {
-    grid-area: 13 / 1 / span 2 / span 10;
+    grid-area: 13 / 1 / span 2 / span 5;
   }
   .item4_red {
-    grid-area: 15 / 1 / span 2 / span 10;
+    grid-area: 15 / 1 / span 2 / span 5;
   }
   .item5_red {
     grid-area: 17 / 1 / span 2 / span 10;
@@ -77,29 +80,25 @@
     .item1_red {
       grid-area: 1 / 1 / span 6 / span 6;
       text-align: justify;
-      .col-6 {
-        h3 {
-          font-size: larger;
-          width: 100%;
-          text-align: left;
-          text-transform: capitalize;
-          color: $primary-color;
-          font-weight: bold;
-          font-size: 1rem;
-        }
+      h3 {
+        font-size: larger;
+        width: 100%;
+        text-align: left;
+        text-transform: capitalize;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1rem;
       }
     }
     .item2_red {
       grid-area: 7 / 1 / span 6 / span 6;
-      div {
-        .rojo__2 {
-          font-size: medium;
-          text-align: left;
-          padding-left: 5%;
-          color: $primary-color;
-          font-weight: bold;
-          font-size: 1rem;
-        }
+      .rojo__2 {
+        font-size: medium;
+        text-align: left;
+        padding-left: 5%;
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1rem;
       }
     }
     .item3_red {
